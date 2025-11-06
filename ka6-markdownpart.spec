@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		markdownpart
 Summary:	Markdown Viewer KPart
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	1038c1700eb0d34ca35ef1f93ad0e8dc
+# Source0-md5:	f47ab1fa0816288e4623413c6b97e298
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -66,5 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %doc README.md
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/markdownpart.so
+%{_libdir}/qt6/plugins/kf6/parts/markdownpart.so
 %{_datadir}/metainfo/org.kde.markdownpart.metainfo.xml
