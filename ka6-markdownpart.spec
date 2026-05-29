@@ -33,6 +33,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Software for the rendered display of Markdown documents.
 
+%description -l pl.UTF-8
+Oprogramowanie do wyświetlania dokumentów Markdown.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
